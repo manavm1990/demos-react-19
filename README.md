@@ -1,6 +1,6 @@
-# React-Tailwind-Vitest
+# React Demos
 
-This is a template for a React project using TailwindCSS and Vite/Vitest. It also includes `require('@tailwindcss/forms')` in the `tailwind.config.js` file.
+It uses referenced template.
 
 ## Scripts
 
