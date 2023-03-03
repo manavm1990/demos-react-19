@@ -1,10 +1,9 @@
 import Header from "./components/Header";
 import catsData from "./data/cats";
-
-console.log(catsData);
+import CatCard from "./components/CatCard";
 
 function App() {
-  return <Header text="Hello World" />;
+  return <CatCard cat={catsData[0]} />;
 }
 
 export default App;
