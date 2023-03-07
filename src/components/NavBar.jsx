@@ -1,7 +1,7 @@
 export default function NavBar() {
   return (
-    <nav>
-      <ul>
+    <nav className="my-8">
+      <ul className="flex justify-around gap-x-8">
         <li>
           <a href="/">Home</a>
         </li>

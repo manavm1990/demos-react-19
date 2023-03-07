@@ -5,10 +5,13 @@ import catsData from "./data/cats";
 import groceriesData from "./data/groceries";
 import UserCard from "./components/UserCard";
 import userData from "./data/users";
+import NavBar from "./components/NavBar";
 
 function App() {
   return (
     <>
+      <NavBar />
+
       <Header text="Hello 🐱" />
 
       {catsData.map((cat) => {
