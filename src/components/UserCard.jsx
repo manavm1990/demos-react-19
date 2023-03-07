@@ -3,9 +3,9 @@ export default function UserCard({ user }) {
     <figure>
       <img src={user.picture?.thumbnail} alt="" />
       <figcaption>
-        <p>
+        <h2>
           {user.name.title} {user.name.first} {user.name.last}
-        </p>
+        </h2>
         <p>{user.email}</p>
         <p>{user.phone}</p>
       </figcaption>
