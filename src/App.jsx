@@ -14,7 +14,12 @@ function App() {
 
       <ul>
         {groceriesData.map((grocery) => {
-          return <li key={grocery.id}>{grocery.name}</li>;
+          return (
+            <li key={grocery.id}>
+              <label htmlFor={grocery.id}>{grocery.name}</label>
+              <input type="checkbox" id={grocery.id} />
+            </li>
+          );
         })}
       </ul>
     </>
