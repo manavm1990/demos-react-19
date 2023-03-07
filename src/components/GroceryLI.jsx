@@ -1,3 +1,5 @@
+import PropTypes from "prop-types";
+
 export default function GroceryLI({ grocery }) {
   return (
     <li key={grocery.id}>
@@ -11,3 +13,11 @@ export default function GroceryLI({ grocery }) {
     </li>
   );
 }
+
+GroceryLI.propTypes = {
+  grocery: PropTypes.shape({
+    id: PropTypes.number.isRequired,
+    name: PropTypes.string.isRequired,
+    purchased: PropTypes.bool.isRequired,
+  }).isRequired,
+};

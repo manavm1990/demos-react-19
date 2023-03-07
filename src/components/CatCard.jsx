@@ -1,3 +1,5 @@
+import PropTypes from "prop-types";
+
 const getRandomWidth = () => {
   const number = Math.random() * (300 - 200) + 200;
   return number.toString().split(".")[0];
@@ -14,3 +16,10 @@ export default function CatCard({ cat }) {
     </figure>
   );
 }
+
+CatCard.propTypes = {
+  cat: PropTypes.shape({
+    name: PropTypes.string.isRequired,
+    description: PropTypes.string.isRequired,
+  }).isRequired,
+};
