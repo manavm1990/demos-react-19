@@ -8,7 +8,9 @@ export default function GroceryLI({ grocery }) {
         id={grocery.id}
         defaultChecked={grocery.purchased}
       />
-      <label htmlFor={grocery.id}>{grocery.name}</label>
+      <label htmlFor={grocery.id} className="ml-2">
+        {grocery.name}
+      </label>
     </li>
   );
 }

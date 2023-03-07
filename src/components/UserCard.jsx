@@ -2,12 +2,12 @@ import PropTypes from "prop-types";
 
 export default function UserCard({ user }) {
   return (
-    <figure>
-      <img src={user.picture?.thumbnail} alt="" />
+    <figure className="rounded border p-4">
+      <img src={user.picture?.thumbnail} alt="" className="rounded" />
       <figcaption>
-        <h2>
+        <h3>
           {user.name.title} {user.name.first} {user.name.last}
-        </h2>
+        </h3>
         <p>{user.email}</p>
         <p>{user.phone}</p>
       </figcaption>

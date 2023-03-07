@@ -10,7 +10,7 @@ export default function CatCard({ cat }) {
     <figure>
       <img src={`https://placekitten.com/${getRandomWidth()}/300`} alt="" />
       <figcaption>
-        <h2>{cat.name}</h2>
+        <h3>{cat.name}</h3>
         <p>{cat.description}</p>
       </figcaption>
     </figure>
