@@ -27,7 +27,7 @@ function App() {
         </ul>
 
         {userData.map((user) => {
-          return <UserCard user={user} key={user.id.value} />;
+          return <UserCard user={user} key={user.email} />;
         })}
 
         <Counter />
