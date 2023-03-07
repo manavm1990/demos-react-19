@@ -1,4 +1,5 @@
 import CatCard from "./components/CatCard";
+import GroceryLI from "./components/GroceryLI";
 import Header from "./components/Header";
 import catsData from "./data/cats";
 import groceriesData from "./data/groceries";
@@ -14,12 +15,7 @@ function App() {
 
       <ul>
         {groceriesData.map((grocery) => {
-          return (
-            <li key={grocery.id}>
-              <label htmlFor={grocery.id}>{grocery.name}</label>
-              <input type="checkbox" id={grocery.id} />
-            </li>
-          );
+          return <GroceryLI grocery={grocery} key={grocery.id} />;
         })}
       </ul>
     </>
