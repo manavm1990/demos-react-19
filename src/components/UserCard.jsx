@@ -1,3 +1,5 @@
+import PropTypes from "prop-types";
+
 export default function UserCard({ user }) {
   return (
     <figure>
@@ -12,3 +14,18 @@ export default function UserCard({ user }) {
     </figure>
   );
 }
+
+UserCard.propTypes = {
+  user: PropTypes.shape({
+    name: PropTypes.shape({
+      title: PropTypes.string.isRequired,
+      first: PropTypes.string.isRequired,
+      last: PropTypes.string.isRequired,
+    }).isRequired,
+    email: PropTypes.string.isRequired,
+    phone: PropTypes.string.isRequired,
+    picture: PropTypes.shape({
+      thumbnail: PropTypes.string.isRequired,
+    }).isRequired,
+  }).isRequired,
+};
