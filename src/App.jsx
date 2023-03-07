@@ -6,7 +6,10 @@ function App() {
   return (
     <>
       <Header text="Hello 🐱" />
-      <CatCard cat={catsData[0]} />
+
+      {catsData.map((cat) => {
+        return <CatCard cat={cat} key={cat.id} />;
+      })}
     </>
   );
 }
