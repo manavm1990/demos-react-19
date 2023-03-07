@@ -1,12 +1,12 @@
 import CatCard from "./components/CatCard";
+import Counter from "./components/Counter";
 import GroceryLI from "./components/GroceryLI";
 import Header from "./components/Header";
+import NavBar from "./components/NavBar";
+import UserCard from "./components/UserCard";
 import catsData from "./data/cats";
 import groceriesData from "./data/groceries";
-import UserCard from "./components/UserCard";
 import userData from "./data/users";
-import NavBar from "./components/NavBar";
-import Counter from "./components/Counter";
 
 function App() {
   return (
