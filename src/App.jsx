@@ -6,6 +6,7 @@ import groceriesData from "./data/groceries";
 import UserCard from "./components/UserCard";
 import userData from "./data/users";
 import NavBar from "./components/NavBar";
+import Counter from "./components/Counter";
 
 function App() {
   return (
@@ -14,19 +15,23 @@ function App() {
 
       <Header text="Hello 🐱" />
 
-      {catsData.map((cat) => {
-        return <CatCard cat={cat} key={cat.id} />;
-      })}
-
-      <ul>
-        {groceriesData.map((grocery) => {
-          return <GroceryLI grocery={grocery} key={grocery.id} />;
+      <main className="space-y-8">
+        {catsData.map((cat) => {
+          return <CatCard cat={cat} key={cat.id} />;
         })}
-      </ul>
 
-      {userData.map((user) => {
-        return <UserCard user={user} key={user.id.value} />;
-      })}
+        <ul>
+          {groceriesData.map((grocery) => {
+            return <GroceryLI grocery={grocery} key={grocery.id} />;
+          })}
+        </ul>
+
+        {userData.map((user) => {
+          return <UserCard user={user} key={user.id.value} />;
+        })}
+
+        <Counter />
+      </main>
     </>
   );
 }
