@@ -27,11 +27,11 @@ function App() {
 
         <section>
           <h2>🛒</h2>
-          <u className="flex list-none justify-around">
+          <ul className="flex list-none justify-around">
             {groceriesData.map((grocery) => {
               return <GroceryLI grocery={grocery} key={grocery.id} />;
             })}
-          </u>
+          </ul>
         </section>
 
         <section>
