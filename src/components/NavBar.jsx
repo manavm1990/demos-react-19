@@ -1,4 +1,6 @@
-export default function NavBar() {
+import PropTypes from "prop-types";
+
+export default function NavBar({ handleClick }) {
   return (
     <nav className="my-8">
       <ul className="flex justify-around gap-x-8">
@@ -6,7 +8,9 @@ export default function NavBar() {
           <a href="/">Home</a>
         </li>
         <li>
-          <a href="/cats">Cats</a>
+          <a href="/cats" onClick={handleClick}>
+            Cats
+          </a>
         </li>
         <li>
           <a href="/users">Users</a>
@@ -21,3 +25,7 @@ export default function NavBar() {
     </nav>
   );
 }
+
+NavBar.propTypes = {
+  handleClick: PropTypes.func.isRequired,
+};
