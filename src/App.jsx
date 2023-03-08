@@ -2,10 +2,11 @@ import React from "react";
 import Counter from "./components/Counter";
 import GroceryLI from "./components/GroceryLI";
 import Header from "./components/Header";
-import NavBar from "./components/NavBar";
+import NavBar from "./components/NavBar/NavBar";
 import UserCard from "./components/UserCard";
 import catsData from "./data/cats";
 import groceriesData from "./data/groceries";
+import links from "./data/links";
 import userData from "./data/users";
 import Cats from "./routes/Cats";
 
@@ -17,14 +18,16 @@ function App() {
     setCurrentPath("/" + event.target.textContent.toLowerCase());
   };
 
+  // TODO: Render the correct component based on the current path
   switch (currentPath) {
     case "/cats":
       return <Cats catsData={catsData} />;
   }
 
+  // TODO: Move stuff to 'routes' folder
   return (
     <>
-      <NavBar handleClick={handleNavClick} />
+      <NavBar links={links} handleClick={handleNavClick} />
       <Header text="Hello 🐱" />
 
       <main className="container mx-auto space-y-8">
